@@ -1,7 +1,10 @@
 import fs from 'fs';
 
 function rename() {
-    fs.rename('./dist', './docs', ()=>{});
+    if (fs.existsSync('./docs')) {
+        fs.rmSync('./docs', { recursive: true, force: true });
+    }
+    fs.renameSync('./dist', './docs', ()=>{});
 }
 
 rename();
