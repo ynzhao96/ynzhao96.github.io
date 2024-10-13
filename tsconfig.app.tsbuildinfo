@@ -1,1 +1,1 @@
-{"root":["./src/main.tsx","./src/vite-env.d.ts","./src/constant/problemlist.ts","./src/pages/app/app.tsx","./src/pages/problems/problems.tsx"],"version":"5.6.3"}
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/constant/problemlist.ts","./src/pages/home/home.tsx","./src/pages/problems/problems.tsx"],"version":"5.6.3"}
