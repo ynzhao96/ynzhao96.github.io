@@ -3,6 +3,13 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'github.com/ynzhao96/ynzhao96.github.io',
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      input: {
+        main: "index.html",
+        404: "404.html",
+      }
+    }
+  }
 })
