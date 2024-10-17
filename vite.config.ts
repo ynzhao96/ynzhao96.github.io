@@ -1,14 +1,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { resolve } from 'path'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
       input: {
-        main: "index.html",
-        404: "404.html",
+        main: resolve(__dirname, 'html/index.html'),
+        404: resolve(__dirname, 'html/404.html'),
+        problems: resolve(__dirname, 'html/problems.html'),
       }
     }
   }
