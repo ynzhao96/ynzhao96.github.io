@@ -5,18 +5,18 @@ export default function Problems() {
         <div>
             <div>LeetCode Top Interview Questions</div>
             <table>
-                <tr>
+                <div>
                     <th>ID</th>
                     <th>Title</th>
                     <th>Difficulty</th>
-                </tr>
+                </div>
                 
-                {ProblemList.map(problem => 
-                    <tr>
+                {ProblemList.map((problem, index) => 
+                    <div key={index}>
                         <td>{problem.id}</td>
                         <td>{problem.title}</td>
                         <td>{problem.difficulty}</td>
-                    </tr>
+                    </div>
                 )}
                 
             </table>

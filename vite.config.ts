@@ -8,7 +8,8 @@ export default defineConfig({
     outDir: 'docs',
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'html/index.html'),
+        app: resolve(__dirname, 'html/index.html'),
+        home: resolve(__dirname, 'html/home.html'),
         404: resolve(__dirname, 'html/404.html'),
         problems: resolve(__dirname, 'html/problems.html'),
       }

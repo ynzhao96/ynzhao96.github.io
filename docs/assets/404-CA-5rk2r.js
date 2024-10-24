@@ -1,1 +1,0 @@
-import{j as t,c as r,r as e}from"./client-nMGDAYsi.js";function o(){return t.jsx("div",{children:"404 NOT FOUND"})}r(document.getElementById("root")).render(t.jsx(e.StrictMode,{children:t.jsx(o,{})}));
