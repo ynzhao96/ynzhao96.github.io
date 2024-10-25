@@ -19,5 +19,11 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/pages/home/index.tsx"></script>
+    <script>
+      // redirect to index when refreshing page
+      if (performance.navigation.type === 1) {
+        window.location.href = '/';
+      }
+    </script>
   </body>
 </html>
