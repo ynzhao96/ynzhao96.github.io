@@ -10,10 +10,10 @@ export default function App() {
   return (
     <Router>
       <Layout className='lay-out'>
-        <Sider theme='light'>
+        <Sider theme='light' className='sider'>
           <SiderComponent />
         </Sider>
-        <Content>
+        <Content className='content'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />

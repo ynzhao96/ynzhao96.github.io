@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,28 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yanning(George) Zhao</title>
     <style>
-      body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            place-items: center;
-            min-width: 320px;
-            min-height: 100vh;
+      html {
+        scrollbar-width: 2;
+
+        ::-webkit-scrollbar {
+          width: 2px;
+          height: 0;
         }
+
+        ::-webkit-scrollbar-track {
+          background-color: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background-color: gray;
+          border-radius: 10px;
+        }
+      }
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        place-items: center;
+        min-width: 320px;
+        min-height: 100vh;
+      }
     </style>
-    <script type="module" crossorigin src="/assets/app-DJnSsG8C.js"></script>
+    <script type="module" crossorigin src="/assets/app-CQjPCBlm.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/client-BA2MgDpo.js">
-    <link rel="modulepreload" crossorigin href="/assets/home-7UwBCZ6l.js">
+    <link rel="modulepreload" crossorigin href="/assets/home-BimogomN.js">
     <link rel="modulepreload" crossorigin href="/assets/problems-DOZ4gio4.js">
-    <link rel="stylesheet" crossorigin href="/assets/home-DGumi1u-.css">
-    <link rel="stylesheet" crossorigin href="/assets/app-CEAzZymE.css">
+    <link rel="stylesheet" crossorigin href="/assets/app-CBLhXHlX.css">
   </head>
   <body>
     <div id="root"></div>
     <script>
       // redirect to index when refreshing page
       if (performance.navigation.type === 1) {
-        window.location.href = '/';
+        window.location.href = "/";
       }
     </script>
   </body>

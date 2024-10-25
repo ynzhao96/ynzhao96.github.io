@@ -1,12 +1,12 @@
 .sider {
-    height: 100%;
+  .sider-button {
     width: 100%;
-    background-color: white;
-    padding: 15px;
-    margin-top: 20px;
-    .sider-button {
+    display: flex;
+    justify-content: start;
+
+    .sider-button-content {
       width: 100%;
-      display: flex;
-      justify-content: start;
+      text-align: start;
     }
   }
+}
