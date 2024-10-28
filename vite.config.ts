@@ -12,6 +12,7 @@ export default defineConfig({
         home: resolve(__dirname, 'html/home.html'),
         404: resolve(__dirname, 'html/404.html'),
         problems: resolve(__dirname, 'html/problems.html'),
+        resume: resolve(__dirname, 'html/resume.html'),
       }
     }
   }

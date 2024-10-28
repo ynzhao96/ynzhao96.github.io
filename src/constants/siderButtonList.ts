@@ -8,6 +8,7 @@ export const siderButtonList = [
     },
     {
         title: 'My resume',
+        href: '/resume'
     },
     {
         title: 'problems',

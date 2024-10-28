@@ -1,25 +1,24 @@
-import { ProblemList } from "../../constant/problemList"
+import { ProblemList } from "../../constants/problemList";
 
 export default function Problems() {
-    return (
+  return (
+    <div>
+      <div>LeetCode Top Interview Questions</div>
+      <table>
         <div>
-            <div>LeetCode Top Interview Questions</div>
-            <table>
-                <div>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Difficulty</th>
-                </div>
-                
-                {ProblemList.map((problem, index) => 
-                    <div key={index}>
-                        <td>{problem.id}</td>
-                        <td>{problem.title}</td>
-                        <td>{problem.difficulty}</td>
-                    </div>
-                )}
-                
-            </table>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Difficulty</th>
         </div>
-    )
+
+        {ProblemList.map((problem, index) => (
+          <div key={index}>
+            <td>{problem.id}</td>
+            <td>{problem.title}</td>
+            <td>{problem.difficulty}</td>
+          </div>
+        ))}
+      </table>
+    </div>
+  );
 }
