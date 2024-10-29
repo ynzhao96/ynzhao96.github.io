@@ -1,0 +1,1 @@
+import{j as n}from"./client-C-j2wghH.js";function a(){return n.jsxs(n.Fragment,{children:[n.jsx("object",{width:"100%",height:"100%",data:"/Yanning Zhao - Full-stack Engineer.pdf",type:"application/pdf"}),n.jsx("a",{style:{float:"right"},href:"/Yanning Zhao - Full-stack Engineer.pdf",download:"/Yanning Zhao - Full-stack Engineer.pdf",children:"download here"})]})}export{a as R};
