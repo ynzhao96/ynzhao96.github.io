@@ -1,0 +1,10 @@
+.siderButton {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+
+  .siderButtonContent {
+    width: 100%;
+    text-align: start;
+  }
+}

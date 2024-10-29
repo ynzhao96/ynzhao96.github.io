@@ -12,7 +12,7 @@ export default function Resume() {
         href="/Yanning Zhao - Full-stack Engineer.pdf"
         download="/Yanning Zhao - Full-stack Engineer.pdf"
       >
-        download
+        download here
       </a>
     </>
   );

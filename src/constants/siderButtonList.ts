@@ -4,9 +4,6 @@ export const siderButtonList = [
         href: '/home'
     },
     {
-        title: 'About me',
-    },
-    {
         title: 'My resume',
         href: '/resume'
     },

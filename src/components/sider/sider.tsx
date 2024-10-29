@@ -1,8 +1,8 @@
 import { Button } from "antd";
-import "./sider.css";
 import { useState } from "react";
 import { siderButtonList } from "../../constants/siderButtonList";
 import { useNavigate } from "react-router-dom";
+import styles from "./sider.module.css";
 
 export default function Sider() {
   const [selected, setSelected] = useState(0);
@@ -12,7 +12,7 @@ export default function Sider() {
       {siderButtonList.map((button, index) => (
         <Button
           key={index}
-          className="sider-button"
+          className={styles.siderButton}
           color={index === selected ? "primary" : "default"}
           variant={index === selected ? "filled" : "text"}
           onClick={() => {
@@ -20,7 +20,7 @@ export default function Sider() {
             setSelected(index);
           }}
         >
-          <div className="sider-button-content">{button.title}</div>
+          <div className={styles.siderButtonContent}>{button.title}</div>
         </Button>
       ))}
     </>

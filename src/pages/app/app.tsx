@@ -1,4 +1,3 @@
-import "./app.css";
 import { Layout } from "antd";
 const { Sider, Content } = Layout;
 import SiderComponent from "../../components/sider/sider";
@@ -7,15 +6,16 @@ import Home from "../home/home";
 import Problems from "../problems/problems";
 import Resume from "../resume/resume";
 import NotFound from "../404/404";
+import styles from "./app.module.css";
 
 export default function App() {
   return (
     <Router>
-      <Layout className="lay-out">
-        <Sider theme="light" className="sider">
+      <Layout className={styles.layOut}>
+        <Sider theme="light" className={styles.sider}>
           <SiderComponent />
         </Sider>
-        <Content className="content">
+        <Content className={styles.content}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
