@@ -6,7 +6,14 @@ export default function Resume() {
         height="100%"
         data="/Yanning Zhao - Full-stack Engineer.pdf"
         type="application/pdf"
-      ></object>
+      />
+      <a
+        style={{ float: "right" }}
+        href="/Yanning Zhao - Full-stack Engineer.pdf"
+        download="/Yanning Zhao - Full-stack Engineer.pdf"
+      >
+        download
+      </a>
     </>
   );
 }
