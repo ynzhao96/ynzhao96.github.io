@@ -7,13 +7,15 @@ export default function Resume() {
         data="/Yanning Zhao - Full-stack Engineer.pdf"
         type="application/pdf"
       />
-      <a
-        style={{ float: "right" }}
-        href="/Yanning Zhao - Full-stack Engineer.pdf"
-        download="/Yanning Zhao - Full-stack Engineer.pdf"
-      >
-        download here
-      </a>
+      <div style={{ float: "right", fontSize: "18px" }}>
+        <span>Problem with preview? </span>
+        <a
+          href="/Yanning Zhao - Full-stack Engineer.pdf"
+          download="/Yanning Zhao - Full-stack Engineer.pdf"
+        >
+          download here
+        </a>
+      </div>
     </>
   );
 }

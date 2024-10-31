@@ -1,17 +1,22 @@
 .homePage {
   display: flex;
   flex-direction: row;
+  margin-top: 80px;
 
   .image {
     width: 33vw;
   }
   .text {
     .title {
-      font-size: 24px;
+      font-size: 32px;
       font-weight: 700;
     }
     .content {
       margin-top: 30px;
+      .row {
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
     }
   }
 }
