@@ -1,6 +1,4 @@
-import { Layout } from "antd";
-const { Sider, Content } = Layout;
-import SiderComponent from "../../components/sider/sider";
+import SiteHeader from "../../components/siteHeader/SiteHeader";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import Home from "../home/Home";
 import Resume from "../resume/resume";
@@ -16,19 +14,15 @@ const pages = [
 export default function App() {
   return (
     <Router>
-      <Layout className={styles.layOut}>
-        <Sider theme="light" className={styles.sider}>
-          <SiderComponent />
-        </Sider>
-        <Content className={styles.content}>
-          <Routes>
-            {pages.flatMap(({ paths, element }) =>
-              paths.map((path) => <Route key={path} path={path} element={element} />)
-            )}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Content>
-      </Layout>
+      <SiteHeader />
+      <main className={styles.content}>
+        <Routes>
+          {pages.flatMap(({ paths, element }) =>
+            paths.map((path) => <Route key={path} path={path} element={element} />)
+          )}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
     </Router>
   );
 }

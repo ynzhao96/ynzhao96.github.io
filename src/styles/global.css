@@ -1,0 +1,25 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--ink);
+  background: #f6f8f9;
+  --ink: #172d3b;
+  --muted: #495c69;
+  --accent: #135d7d;
+  --accent-wash: #e7f1f5;
+  --line: #dbe4e9;
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --site-width: min(68rem, 100% - var(--gutter) * 2);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}

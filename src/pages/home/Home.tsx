@@ -1,26 +1,23 @@
-import { Image } from "antd";
 import styles from "./home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.homePage}>
-      <div className={styles.image}>
-        <Image src={`${import.meta.env.BASE_URL}RW.jpg`} preview={false} width="33vw" />
+    <section className={styles.homePage} aria-labelledby="home-title">
+      <div>
+        <h1 id="home-title" className={styles.title}>Hello, I’m Yanning Zhao.</h1>
+        <p className={styles.intro}>I’m a full-stack developer with 3 years of experience.</p>
+        <p className={styles.details}>
+          I graduated from Washington University in St. Louis. Outside of work,
+          I’m a basketball fan and a black cat’s favourite human.
+        </p>
       </div>
-      <div className={styles.text}>
-        <div className={styles.title}>😃Hello, I'm Yanning Zhao</div>
-        <div className={styles.content}>
-          <div className={styles.row}>I am:</div>
-          <li className={styles.row}>
-            👨‍💻 A full-stack developer with 3 years experience.
-          </li>
-          <li className={styles.row}>
-            👨‍🎓 Graduated from Washington University in Saint Louis.
-          </li>
-          <li className={styles.row}>🐈‍⬛ A cute black cat's favourite human.</li>
-          <li className={styles.row}>🏀 A basketball enthusiastic.</li>
-        </div>
-      </div>
-    </div>
+      <img
+        className={styles.image}
+        src={`${import.meta.env.BASE_URL}RW.jpg`}
+        alt="Illustration of a basketball player in a blue jersey"
+        width="1080"
+        height="1080"
+      />
+    </section>
   );
 }

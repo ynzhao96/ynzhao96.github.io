@@ -1,16 +1,5 @@
-.layOut {
-  width: 100vw;
-  height: 100vh;
-
-  .sider {
-    height: 100vh;
-    width: 200px;
-    background-color: white;
-    padding: 15px;
-  }
-
-  .content {
-    overflow-y: scroll;
-    padding: 20px;
-  }
+.content {
+  width: var(--site-width);
+  margin-inline: auto;
+  padding-block: clamp(2rem, 7vw, 6rem);
 }
