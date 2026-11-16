@@ -1,28 +1,34 @@
 import { Button } from "antd";
-import { useState } from "react";
-import { siderButtonList } from "../../constants/siderButtonList";
-import { useNavigate } from "react-router-dom";
+import { siteRoutes } from "../../constants/siteRoutes";
+import { matchPath, useLocation, useNavigate } from "react-router-dom";
 import styles from "./sider.module.css";
 
 export default function Sider() {
-  const [selected, setSelected] = useState(0);
+  const { pathname } = useLocation();
   const navigate = useNavigate();
   return (
-    <>
-      {siderButtonList.map((button, index) => (
-        <Button
-          key={index}
-          className={styles.siderButton}
-          color={index === selected ? "primary" : "default"}
-          variant={index === selected ? "filled" : "text"}
-          onClick={() => {
-            if (button.href) navigate(button.href);
-            setSelected(index);
-          }}
-        >
-          <div className={styles.siderButtonContent}>{button.title}</div>
-        </Button>
-      ))}
-    </>
+    <nav aria-label="Main navigation">
+      {Object.values(siteRoutes).map(({ title, paths }) => {
+        const [href] = paths;
+        const selected = paths.some((path) => matchPath(path, pathname));
+        return (
+          <Button
+            key={href}
+            href={href}
+            aria-current={selected ? "page" : undefined}
+            className={styles.siderButton}
+            color={selected ? "primary" : "default"}
+            variant={selected ? "filled" : "text"}
+            onClick={(event) => {
+              if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+              event.preventDefault();
+              navigate(href);
+            }}
+          >
+            <span className={styles.siderButtonContent}>{title}</span>
+          </Button>
+        );
+      })}
+    </nav>
   );
 }
